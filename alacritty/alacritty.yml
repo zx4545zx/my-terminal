@@ -1,0 +1,52 @@
+window:
+  dimensions:
+    columns: 113
+    lines: 29
+  class:
+    instance: Alacritty
+
+scrolling:
+  history: 10000
+
+font:
+  size: 18.0
+  normal:
+    family: 'MesloLGS NF'
+
+colors:
+   primary:
+     background: '#2E3440'
+     foreground: '#D8DEE9'
+
+   normal:
+     black:   '#3B4252'
+     red:     '#BF616A'
+     green:   '#A3BE8C'
+     yellow:  '#EBCB8B'
+     blue:    '#81A1C1'
+     magenta: '#B48EAD'
+     cyan:    '#88C0D0'
+     white:   '#E5E9F0'
+
+   bright:
+     black:   '#4C566A'
+     red:     '#BF616A'
+     green:   '#A3BE8C'
+     yellow:  '#EBCB8B'
+     blue:    '#81A1C1'
+     magenta: '#B48EAD'
+     cyan:    '#8FBCBB'
+     white:   '#ECEFF4'
+
+shell:
+  program: /bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
+
+key_bindings:
+  - { key: PageUp,   mods: Shift,   action: ScrollPageUp   }
+  - { key: PageDown, mods: Shift,   action: ScrollPageDown }
+  - { key: End,      mods: Shift,   action: ScrollToBottom }
+  - { key: Home,     mods: Shift,   action: ScrollToTop    }
